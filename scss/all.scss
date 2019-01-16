@@ -23,15 +23,20 @@ main {
             @include ease;
 
             &:hover {
-                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
             }
         }
     }
 
     .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         padding: 10rem 0;
 
         .channel {
@@ -62,8 +67,12 @@ main {
             }
 
             .channelBottom {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 background: rgba(#000, 0.4);
                 color: #fff;
                 height: 80px;
@@ -111,8 +120,10 @@ main {
             }
 
             &:hover {
-                box-shadow: -5px 5px 20px 1px rgb(56, 56, 56);
-                transform: translate(5px, -5px);
+                -webkit-box-shadow: -5px 5px 20px 1px rgb(56, 56, 56);
+                        box-shadow: -5px 5px 20px 1px rgb(56, 56, 56);
+                -webkit-transform: translate(5px, -5px);
+                        transform: translate(5px, -5px);
             }
 
             &:hover .channelTop {

@@ -1,5 +1,6 @@
 * {
   font-family: 'Microsoft JhengHei';
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -31,28 +32,37 @@ main {
       font-size: 1.5rem;
       display: inline-block;
       padding: 5px 10px;
+      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       main .title a:hover {
+        -webkit-transform: scale(1.1);
         transform: scale(1.1); }
   main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 10rem 0; }
     main .container .channel {
       max-width: 300px;
       margin-bottom: 2rem;
       cursor: pointer;
+      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       main .container .channel .channelTop {
         position: relative;
         height: 168px;
+        -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease; }
         main .container .channel .channelTop img {
           position: relative;
           opacity: 0;
           width: 100%;
           height: auto;
+          -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
         main .container .channel .channelTop::before {
           content: '';
@@ -61,7 +71,11 @@ main {
           width: 100%;
           height: 100%; }
       main .container .channel .channelBottom {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         background: rgba(0, 0, 0, 0.4);
         color: #fff;
@@ -97,7 +111,9 @@ main {
           main .container .channel .channelBottom .channelIfo .hostName {
             font-weight: 300; }
       main .container .channel:hover {
+        -webkit-box-shadow: -5px 5px 20px 1px #383838;
         box-shadow: -5px 5px 20px 1px #383838;
+        -webkit-transform: translate(5px, -5px);
         transform: translate(5px, -5px); }
       main .container .channel:hover .channelTop {
         -webkit-filter: brightness(1.3);

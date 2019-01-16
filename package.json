@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "imitate the twitch",
   "main": "index.js",
+  "homepage": "https://roger45663.github.io/twitch_channel",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "watch": "webpack --mode development --watch",
     "start": "webpack --mode development",
-    "deploy": "webpack --mode production"
+    "deploy": "webpack --mode production",
+    "deploy-gh-pages": "gh-pages -d dist"
   },
   "author": "Pei-Ting Lin",
   "license": "MIT",
@@ -19,6 +21,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",
+    "gh-pages": "^2.0.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   }

@@ -1,7 +1,8 @@
 // global setup
 * {
     font-family: 'Microsoft JhengHei';
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html, body {
@@ -30,5 +31,6 @@ $placeholderImg: 'data:image/jpeg;base64,/9j/2wCEAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8
 }
 
 @mixin ease {
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
