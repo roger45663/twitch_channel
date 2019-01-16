@@ -1,0 +1,125 @@
+@import 'config';
+
+#bodyEl {
+    background: url($bgImg) no-repeat center;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+    background: rgba(0,0,0,0.5);
+
+    .title {
+        text-align: center;
+        padding-top: 5rem;
+        color: #fff;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            display: inline-block;
+            padding: 5px 10px;
+            @include ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10rem 0;
+
+        .channel {
+            max-width: 300px;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            @include ease;
+
+            .channelTop {
+                position: relative;
+                height: 168px;
+                @include ease;
+
+                img {
+                    position: relative;
+                    opacity: 0;
+                    @include size(100%,auto);
+                    @include ease;
+                }
+
+                &::before {
+                    content: '';
+                    background: url($placeholderImg);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .channelBottom {
+                display: flex;
+                align-items: center;
+                background: rgba(#000, 0.4);
+                color: #fff;
+                height: 80px;
+
+
+                .portrait {
+                    @include size(50px, 50px);
+                    margin: 1rem;
+                    position: relative;
+
+                    img {
+                        @include size(100%, auto);
+                        border-radius: 50%;
+                        position: relative;
+                        opacity: 0;
+                    }
+
+                    &::before {
+                        content: '';
+                        background: url($placeholderImg) center;
+                        background-size: cover;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        border-radius: 50%;
+                    }
+                }
+
+                .channelIfo {
+                    margin-left: 0.5rem;
+
+                    .channelName {
+                        width: 200px;
+                        margin-bottom: 0.2rem;
+                        font-weight: 500;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .hostName {
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: -5px 5px 20px 1px rgb(56, 56, 56);
+                transform: translate(5px, -5px);
+            }
+
+            &:hover .channelTop {
+                -webkit-filter: brightness(1.3);
+                filter: brightness(1.3);
+            }
+        }
+    }
+}
+    

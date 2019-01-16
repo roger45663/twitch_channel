@@ -1,0 +1,25 @@
+{
+  "name": "twitch",
+  "version": "1.0.0",
+  "description": "imitate the twitch",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack --mode development",
+    "deploy": "webpack --mode production"
+  },
+  "author": "Pei-Ting Lin",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
