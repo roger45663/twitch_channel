@@ -203,6 +203,12 @@ $(document).ready(function() {
                 appendData(LANG);
             }
         }
+
+        if ($(this).scrollTop() > 1000) {
+            $('.goTop').fadeIn(); //show
+        } else {
+            $('.goTop').fadeOut();	//hide
+        }
     })
 
     // 語言切換
@@ -223,4 +229,11 @@ $(document).ready(function() {
         // 再將要渲染的語言丟給 appendData 去重新渲染頁面
         appendData(LANG);
     })
+
+    // scroll body to 0px on click
+    $('.goTop a').click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({ scrollTop: 0 }, 800); //speed			
+        return false;
+    });
 })
