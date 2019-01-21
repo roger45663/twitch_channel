@@ -2,12 +2,11 @@
 
 #bodyEl {
     background: url($bgImg) no-repeat center;
+    background-size: cover;
     background-attachment: fixed;
 }
 
 main {
-    // min-height: 100vh;
-    // background: rgba(0,0,0,0.5);
 
     .title {
         text-align: center;
